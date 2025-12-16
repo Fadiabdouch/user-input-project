@@ -1,0 +1,12 @@
+# Node
+node_modules/
+npm-debug.log*
+
+# React
+frontend/build/
+
+# Env
+.env
+
+# OS
+.DS_Store
