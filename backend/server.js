@@ -2,10 +2,18 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-app.use(cors());
+
+app.use(cors({
+  origin: "*"
+}));
+
 app.use(express.json());
 
 let messages = [];
+
+app.get("/", (req, res) => {
+  res.send("Backend is running");
+});
 
 app.post("/api/message", (req, res) => {
   const { name, message } = req.body;
